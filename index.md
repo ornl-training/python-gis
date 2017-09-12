@@ -3,7 +3,7 @@ layout: lesson
 root: .
 
 maintainers:
-  - Gregory Watson
+  - Greg Watson
 ---
 
 **Lesson Maintainers:** {{ page.maintainers | join: ', ' }}
