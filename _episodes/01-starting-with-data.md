@@ -375,6 +375,8 @@ summary stats.
 > 3. Summarize weight values for each plot in your data. HINT: you can use the
 >   following syntax to only create summary statistics for one column in your data
 >   `by_plot['weight'].describe()`
+> 4. The `count()` method show the total number of entries in a column. Why are the values different
+>   in each column for the command `grouped_data.count()`?
 >
 >
 >> ## Did you get #3 right?
