@@ -466,7 +466,7 @@ total_count.plot(kind='bar');
 >
 > * [For more on Pandas plots, visit this link.](http://pandas.pydata.org/pandas-docs/stable/visualization.html#basic-plotting-plot)
 > * You can use the code that follows to create a stacked bar plot but the data to stack
->  need to be in individual columns.  Here's a simple example with some data where
+>  needs to be in individual columns.  Here's a simple example with some data where
 >  'a', 'b', and 'c' are the groups, and 'one' and 'two' are the subgroups.
 >
 > ```
@@ -495,7 +495,7 @@ total_count.plot(kind='bar');
 > ![Stacked Bar Plot](../fig/stackedBar1.png)
 >
 > * You can use the `.unstack()` method to transform grouped data into columns
-> for each plotting.  Try running `.unstack()` on some DataFrames above and see
+> for each plot.  Try running `.unstack()` on some DataFrames above and see
 > what it yields.
 >
 > Start by transforming the grouped data (by plot and sex) into an unstacked layout, then create

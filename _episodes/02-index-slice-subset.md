@@ -93,11 +93,9 @@ surveys_df['speciess']
 
 ## Extracting Range based Subsets: Slicing
 
-**REMINDER**: Python Uses 0-based Indexing
-
 Let's remind ourselves that Python uses 0-based
-indexing. This means that the first element in an object is located at position
-0. This is different from other tools like R and Matlab that index elements
+indexing. This means that the first element in an object is located at position 0. 
+This is different from other tools like R and Matlab that index elements
 within objects starting at 1.
 
 ```python
@@ -114,24 +112,32 @@ a = [1, 2, 3, 4, 5]
 > 1. What value does the code below return?
 >
 >    ```python
->    a[0]
+>    a[-2]
 >    ```
 >
-> 2. How about this:
+> 2. What value does the code below return? Why?
 >
 >    ```python
 >    a[5]
 >    ```
 >
-> 3. In the example above, calling `a[5]` returns an error. Why is that?
->
-> 4. What about?
+> 5. What about this?
 >
 >    ```python
 >    a[len(a)]
 >    ```
 {: .challenge}
 
+> ## Negative Indices
+> Python allows indices to be negative. This indicates that you should start counting from
+> the *right hand* end of the list, rather the left hand end. Negative indexes start from
+> -1 (since there is no -0). A negative index of *n* means the *nth* element from the right
+> hand end.
+>
+> > ## Challenge
+> > What negative index refers to the *first* element in the list?
+> {: .challenge}
+{: .callout}
 
 ## Slicing Subsets of Rows in Python
 
