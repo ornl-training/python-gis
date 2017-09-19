@@ -12,7 +12,7 @@ Data for this lesson is from the Portal Project Teaching Database -
 For this lesson, we will use six files for the data. Download these files to your computer. Once you click on them they should be automatically downloaded to your default download directory. Some browsers may require you to right click on the link to specify the download location.
 
 - [surveys.csv](../data/surveys.csv)
-- [surveys_complete.csv](../data_output/surveys.csv)
+- [surveys_complete.csv](../data_output/surveys_complete.csv)
 - [species.csv](../data/species.csv)
 - [speciesSubset.csv](../data/speciesSubset.csv)
 - [bouldercreek_09_2013.txt](../data/bouldercreek_09_2013.txt)

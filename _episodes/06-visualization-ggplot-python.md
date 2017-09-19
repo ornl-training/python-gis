@@ -229,44 +229,43 @@ hidden.
 > from integer to factor. Why does this change how R makes the graph?
 >
 >> ## Solution
->> Start with the boxplot we created:
+>> 1. Start with the boxplot we created:
 >>
->> ```python
->> ggplot(aes(x = 'species_factor', y = 'hindfoot_length'),data = surveys_complete) + \
->>    geom_jitter(alpha=0.3) + \
->>        scale_x_discrete(breaks=xcodes, labels=xlabels) + \
->>                         xlab('species_id') + geom_boxplot(alpha=0)
->> ```
+>>     ```python
+>>     ggplot(aes(x = 'species_factor', y = 'hindfoot_length'),data = surveys_complete) + \
+>>        geom_jitter(alpha=0.3) + \
+>>            scale_x_discrete(breaks=xcodes, labels=xlabels) + \
+>>                             xlab('species_id') + geom_boxplot(alpha=0)
+>>     ```
 >>
 >> 1. Replace the box plot with a violin plot; see `geom_violin()`.
 >>
->> ```python
->> ggplot(aes(x = 'species_factor', y = 'hindfoot_length'),data = surveys_complete) + \
->>    geom_jitter(alpha=0.3) + \
->>        scale_x_discrete(breaks=xcodes, labels=xlabels) + \
->>                         xlab('species_id') + geom_violin(alpha=0)
->> ```
+>>     ```python
+>>     ggplot(aes(x = 'species_factor', y = 'hindfoot_length'),data = surveys_complete) + \
+>>        geom_jitter(alpha=0.3) + \
+>>            scale_x_discrete(breaks=xcodes, labels=xlabels) + \
+>>                             xlab('species_id') + geom_violin(alpha=0)
+>>     ```
 >>
 >> 2. Represent weight on the log10 scale; see `scale_y_log10()`.
 >>
->> ```python
->> ggplot(aes(x = 'species_factor', y = 'hindfoot_length'),data = surveys_complete) + \
->>    geom_jitter(alpha=0.3) + \
->>        scale_x_discrete(breaks=xcodes, labels=xlabels) + \
->>                         xlab('species_id') + geom_violin(alpha=0) + \
->>            scale_y_log(base=10)
->> ```
+>>     ```python
+>>     ggplot(aes(x = 'species_factor', y = 'hindfoot_length'),data = surveys_complete) + \
+>>        geom_jitter(alpha=0.3) + \
+>>            scale_x_discrete(breaks=xcodes, labels=xlabels) + \
+>>                             xlab('species_id') + geom_violin(alpha=0) + \
+>>                scale_y_log(base=10)
+>>     ```
 >>
 >> 3. Create boxplot for `hindfoot_length`.
 >>
->> ```python
->> ggplot(aes(x = 'species_factor', y = 'hindfoot_length'),data = surveys_complete) + \
->>     geom_jitter(alpha=0.01) + \
->>        scale_x_discrete(breaks=xcodes, labels=xlabels) + \
->>                         xlab('species_id') + geom_boxplot(alpha=0) + \
->>            scale_y_log(base=10)
->>            
->> ```
+>>     ```python
+>>     ggplot(aes(x = 'species_factor', y = 'hindfoot_length'),data = surveys_complete) + \
+>>         geom_jitter(alpha=0.01) + \
+>>            scale_x_discrete(breaks=xcodes, labels=xlabels) + \
+>>                             xlab('species_id') + geom_boxplot(alpha=0) + \
+>>                scale_y_log(base=10)
+>>     ```
 >>
 >> 4. Add color to the datapoints on your boxplot according to the
 >>    plot from which the sample was taken (`plot_id`).
@@ -274,14 +273,13 @@ hidden.
 >>    of `plot_id` from integer to factor. Why does this change how R
 >>    makes the graph?
 >>
->> ```python
->> ggplot(aes(x = 'species_factor', y = 'hindfoot_length', color='plot_id'),data = surveys_complete) + \
->>     geom_jitter(alpha=0.01) + \
->>        scale_x_discrete(breaks=xcodes, labels=xlabels) + \
->>                         xlab('species_id') + geom_boxplot(alpha=0) + \
->>            scale_y_log(base=10)
->>     
->> ```
+>>     ```python
+>>     ggplot(aes(x = 'species_factor', y = 'hindfoot_length', color='plot_id'),data = surveys_complete) + \
+>>         geom_jitter(alpha=0.01) + \
+>>            scale_x_discrete(breaks=xcodes, labels=xlabels) + \
+>>                             xlab('species_id') + geom_boxplot(alpha=0) + \
+>>                scale_y_log(base=10)
+>>     ```
 > {: .solution}
 {: .challenge}
 
