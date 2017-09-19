@@ -6,9 +6,6 @@ permalink: /setup/
 
 > ## Data
 {: .prereq}
-Data for this lesson is from the Portal Project Teaching Database -
-[available on FigShare](https://figshare.com/articles/Portal_Project_Teaching_Database/1314459).
-
 For this lesson, we will use six files for the data. Download these files to your computer. Once you click on them they should be automatically downloaded to your default download directory. Some browsers may require you to right click on the link to specify the download location.
 
 - [surveys.csv](../data/surveys.csv)
