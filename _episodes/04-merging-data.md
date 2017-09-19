@@ -179,7 +179,7 @@ survey_sub = surveys_df.head(10)
 
 # import a small subset of the species data designed for this part of the lesson.
 # It is stored in the data folder.
-species_sub = pd.read_csv('data/speciesSubset.csv', keep_default_na=False, na_values=[""])
+species_sub = pd.read_csv('speciesSubset.csv', keep_default_na=False, na_values=[""])
 ```
 
 In this example, `species_sub` is the lookup table containing genus, species, and

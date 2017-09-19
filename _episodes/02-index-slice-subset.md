@@ -195,19 +195,19 @@ DataFrame.
 Let's look at what happens when we reassign the values within a subset of the
 DataFrame that references another DataFrame object:
 
-   ```
-    # Assign the value `0` to the first three rows of data in the DataFrame
-    ref_surveys_df[0:3] = 0
-    ```
+```
+# Assign the value `0` to the first three rows of data in the DataFrame
+ref_surveys_df[0:3] = 0
+```
 
 Let's try the following code:
 
-    ```
-   # ref_surveys_df was created using the '=' operator
-    ref_surveys_df.head()
+```
+# ref_surveys_df was created using the '=' operator
+ref_surveys_df.head()
 
-    # surveys_df is the original dataframe
-    surveys_df.head()
+# surveys_df is the original dataframe
+surveys_df.head()
 ```
 
 What is the difference between these two dataframes?

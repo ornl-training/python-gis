@@ -86,7 +86,7 @@ these files using the module `os`:
 ```python
     import os
 
-    os.mkdir('data/yearly_files')
+    os.mkdir('yearly_files')
 ```
 
 The command `os.mkdir` is equivalent to `mkdir` in the shell. Just so we are
@@ -115,13 +115,13 @@ that performs those three steps in sequence for the year 2002:
 import pandas as pd
 
 # Load the data into a DataFrame
-surveys_df = pd.read_csv('data/surveys.csv')
+surveys_df = pd.read_csv('surveys.csv')
 
 # Select only data for 2002
 surveys2002 = surveys_df[surveys_df.year == 2002]
 
 # Write the new DataFrame to a csv file
-surveys2002.to_csv('data/yearly_files/surveys2002.csv')
+surveys2002.to_csv('surveys2002.csv')
 ```
 
 To create yearly data files, we could repeat the last two commands over and
@@ -166,42 +166,42 @@ Putting this into our for loop we get
 
 ```python
 >>> for year in surveys_df['year'].unique():
-...    filename='data/yearly_files/surveys' + str(year) + '.csv'
+...    filename='surveys' + str(year) + '.csv'
 ...    print(filename)
 ...
-data/yearly_files/surveys1977.csv
-data/yearly_files/surveys1978.csv
-data/yearly_files/surveys1979.csv
-data/yearly_files/surveys1980.csv
-data/yearly_files/surveys1981.csv
-data/yearly_files/surveys1982.csv
-data/yearly_files/surveys1983.csv
-data/yearly_files/surveys1984.csv
-data/yearly_files/surveys1985.csv
-data/yearly_files/surveys1986.csv
-data/yearly_files/surveys1987.csv
-data/yearly_files/surveys1988.csv
-data/yearly_files/surveys1989.csv
-data/yearly_files/surveys1990.csv
-data/yearly_files/surveys1991.csv
-data/yearly_files/surveys1992.csv
-data/yearly_files/surveys1993.csv
-data/yearly_files/surveys1994.csv
-data/yearly_files/surveys1995.csv
-data/yearly_files/surveys1996.csv
-data/yearly_files/surveys1997.csv
-data/yearly_files/surveys1998.csv
-data/yearly_files/surveys1999.csv
-data/yearly_files/surveys2000.csv
-data/yearly_files/surveys2001.csv
-data/yearly_files/surveys2002.csv
+surveys1977.csv
+surveys1978.csv
+surveys1979.csv
+surveys1980.csv
+surveys1981.csv
+surveys1982.csv
+surveys1983.csv
+surveys1984.csv
+surveys1985.csv
+surveys1986.csv
+surveys1987.csv
+surveys1988.csv
+surveys1989.csv
+surveys1990.csv
+surveys1991.csv
+surveys1992.csv
+surveys1993.csv
+surveys1994.csv
+surveys1995.csv
+surveys1996.csv
+surveys1997.csv
+surveys1998.csv
+surveys1999.csv
+surveys2000.csv
+surveys2001.csv
+surveys2002.csv
 ```
 
 We can now add the rest of the steps we need to create separate text files:
 
 ```python
 # Load the data into a DataFrame
-surveys_df = pd.read_csv('data/surveys.csv')
+surveys_df = pd.read_csv('surveys.csv')
 
 for year in surveys_df['year'].unique():
 
@@ -209,7 +209,7 @@ for year in surveys_df['year'].unique():
     surveys_year = surveys_df[surveys_df.year == year]
 
     # Write the new DataFrame to a csv file
-    filename = 'data/yearly_files/surveys' + str(year) + '.csv'
+    filename = 'surveys' + str(year) + '.csv'
     surveys_year.to_csv(filename)
 ```
 
@@ -220,13 +220,11 @@ just created to confirm that everything worked as expected.
 
 Notice that the code above created a unique filename for each year.
 
-	filename = 'data/yearly_files/surveys' + str(year) + '.csv'
+	filename = 'surveys' + str(year) + '.csv'
 
 Let's break down the parts of this name:
 
-* The first part is simply some text that specifies the directory to store our
-  data file in (data/yearly_files/) and the first part of the file name
-  (surveys): `'data/yearly_files/surveys'`
+* The first part is simply the first part of the file name: `'surveys'`
 * We can concatenate this with the value of a variable, in this case `year` by
   using the plus `+` sign and the variable we want to add to the file name: `+
   str(year)`
@@ -234,8 +232,7 @@ Let's break down the parts of this name:
 
 Notice that we use single quotes to add text strings. The variable is not
 surrounded by quotes. This code produces the string
-`data/yearly_files/surveys2002.csv` which contains the path to the new filename
-AND the file name itself.
+`surveys2002.csv` which contains file name.
 
 > ## Challenge - Modifying loops
 >
@@ -328,7 +325,7 @@ def one_year_csv_writer(this_year, all_data):
     surveys_year = all_data[all_data.year == this_year]
 
     # Write the new DataFrame to a csv file
-    filename = 'data/yearly_files/function_surveys' + str(this_year) + '.csv'
+    filename = 'function_surveys' + str(this_year) + '.csv'
     surveys_year.to_csv(filename)
 ```
 
@@ -381,7 +378,7 @@ function:
 
 ```python
 # Load the data into a DataFrame
-surveys_df = pd.read_csv('data/surveys.csv')
+surveys_df = pd.read_csv('surveys.csv')
 
 # Create csv files
 yearly_data_csv_writer(1977, 2002, surveys_df)

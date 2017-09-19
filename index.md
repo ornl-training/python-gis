@@ -26,7 +26,7 @@ introduction to plotting. Then it covers some more advanced stuff.
 >
 > This lesson assumes basic knowledge of Python, including how to load modules and write simple Python programs that use functionality such as loops and functions. The
 > Software Carpentry [Programming with Python](http://swcarpentry.github.io/python-novice-inflammation/) or 
-> [Plotting and Programming in Python}(https://ornl-training.github.io/python-novice-gapminder/) lessons are good measures of the prerequisite skills necessary for this lesson.
+> [Plotting and Programming in Python](https://ornl-training.github.io/python-novice-gapminder/) lessons are good measures of the prerequisite skills necessary for this lesson.
 {: .prereq}
 
 > ## For Instructors

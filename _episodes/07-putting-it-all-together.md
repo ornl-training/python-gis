@@ -45,8 +45,8 @@ check the documentation. You can open the docstring in an ipython notebook using
 a question mark. For example:
 
 ```python
-    import pandas as pd
-    pd.read_csv?
+import pandas as pd
+pd.read_csv?
 ```
 
 Look through the function arguments to see if there is a default value that is
@@ -60,26 +60,26 @@ measurements. Convert any measurements in imperial units into SI units. You can
 also change the name of the columns in the DataFrame like this:
 
 ```python
-    df = pd.DataFrame({'1stcolumn':[100,200], '2ndcolumn':[10,20]}) # this just creates a DataFrame for the example!
-    print('With the old column names:\n') # the \n makes a new line, so it's easier to see
-    print(df)
+df = pd.DataFrame({'1stcolumn':[100,200], '2ndcolumn':[10,20]}) # this just creates a DataFrame for the example!
+print('With the old column names:\n') # the \n makes a new line, so it's easier to see
+print(df)
 
-    df.columns = ['FirstColumn','SecondColumn'] # rename the columns!
-    print('\n\nWith the new column names:\n')
-    print(df)
+df.columns = ['FirstColumn','SecondColumn'] # rename the columns!
+print('\n\nWith the new column names:\n')
+print(df)
 
-    With the old column names:
+With the old column names:
 
-       1stcolumn  2ndcolumn
-    0        100         10
-    1        200         20
+   1stcolumn  2ndcolumn
+0        100         10
+1        200         20
 
 
-    With the new column names:
+With the new column names:
 
-       FirstColumn  SecondColumn
-    0          100            10
-    1          200            20
+   FirstColumn  SecondColumn
+0          100            10
+1          200            20
 ```
 
 ## 3. Make a line plot of your data
@@ -112,7 +112,7 @@ line plots using pyplots.
 First, import the pyplot toolbox:
 
 ```python
-    import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 ```
 
 By default, matplotlib will create the figure in a separate window. When using
@@ -120,7 +120,7 @@ ipython notebooks, we can make figures appear in-line within the notebook by
 writing:
 
 ```python
-    %matplotlib inline
+%matplotlib inline
 ```
 
 We can start by plotting the values of a list of numbers (matplotlib can handle
@@ -128,9 +128,9 @@ many types of numeric data, including numpy arrays and pandas DataFrames - we
 are just using a list as an example!):
 
 ```python
-    list_numbers = [1.5, 4, 2.2, 5.7]
-    plt.plot(list_numbers)
-    plt.show()
+list_numbers = [1.5, 4, 2.2, 5.7]
+plt.plot(list_numbers)
+plt.show()
 ```
 
 The command `plt.show()` prompts Python to display the figure. Without it, it
@@ -147,8 +147,8 @@ and the second the y-values. The line connecting the points will follow the list
 in order:
 
 ```python
-    plt.plot([6.8, 4.3, 3.2, 8.1], list_numbers)
-    plt.show()
+plt.plot([6.8, 4.3, 3.2, 8.1], list_numbers)
+plt.show()
 ```
 
 A third, optional argument in `plot()` is a string of characters that indicates
@@ -158,9 +158,9 @@ point (`'o'`), and a dot-dash pattern (`'-.'`). Look through the matplotlib
 gallery for more examples.
 
 ```python
-    plt.plot([6.8, 4.3, 3.2, 8.1], list_numbers, 'ro-.')
-    plt.axis([0,10,0,6])
-    plt.show()
+plt.plot([6.8, 4.3, 3.2, 8.1], list_numbers, 'ro-.')
+plt.axis([0,10,0,6])
+plt.show()
 ```
 
 The command `plt.axis()` sets the limits of the axes from a list of `[xmin,
@@ -174,19 +174,19 @@ same `plt.plot()` command by adding more pairs of x values and y values (and
 optionally line styles):
 
 ```python
-    import numpy as np
+import numpy as np
 
-    # create a numpy array between 0 and 10, with values evenly spaced every 0.5
-    t = np.arange(0., 10., 0.5)
+# create a numpy array between 0 and 10, with values evenly spaced every 0.5
+t = np.arange(0., 10., 0.5)
 
-    # red dashes with no symbols, blue squares with a solid line, and green triangles with a dotted line
-    plt.plot(t, t, 'r--', t, t**2, 'bs-', t, t**3, 'g^:')
+# red dashes with no symbols, blue squares with a solid line, and green triangles with a dotted line
+plt.plot(t, t, 'r--', t, t**2, 'bs-', t, t**3, 'g^:')
 
-    plt.xlabel('This is the x axis')
-    plt.ylabel('This is the y axis')
-    plt.title('This is the figure title')
+plt.xlabel('This is the x axis')
+plt.ylabel('This is the y axis')
+plt.title('This is the figure title')
 
-    plt.show()
+plt.show()
 ```
 
 We can include a legend by adding the optional keyword argument `label=''` in
@@ -197,18 +197,18 @@ lines can also be plotted in the same figure by calling the `plot()` function
 several times:
 
 ```python
-    # red dashes with no symbols, blue squares with a solid line, and green triangles with a dotted line
-    plt.plot(t, t, 'r--', label='linear')
-    plt.plot(t, t**2, 'bs-', label='square')
-    plt.plot(t, t**3, 'g^:', label='cubic')
+# red dashes with no symbols, blue squares with a solid line, and green triangles with a dotted line
+plt.plot(t, t, 'r--', label='linear')
+plt.plot(t, t**2, 'bs-', label='square')
+plt.plot(t, t**3, 'g^:', label='cubic')
 
-    plt.legend(loc='upper left', shadow=True, fontsize='x-large')
+plt.legend(loc='upper left', shadow=True, fontsize='x-large')
 
-    plt.xlabel('This is the x axis')
-    plt.ylabel('This is the y axis')
-    plt.title('This is the figure title')
+plt.xlabel('This is the x axis')
+plt.ylabel('This is the y axis')
+plt.title('This is the figure title')
 
-    plt.show()
+plt.show()
 ```
 
 The function `legend()` adds a legend to the figure, and the optional keyword
@@ -221,23 +221,23 @@ more than one figure, we use the command `plt.figure()` with an increasing
 figure number inside the parentheses:
 
 ```python
-    # this is the first figure
-    plt.figure(1)
-    plt.plot(t, t, 'r--', label='linear')
+# this is the first figure
+plt.figure(1)
+plt.plot(t, t, 'r--', label='linear')
 
-    plt.legend(loc='upper left', shadow=True, fontsize='x-large')
-    plt.title('This is figure 1')
+plt.legend(loc='upper left', shadow=True, fontsize='x-large')
+plt.title('This is figure 1')
 
-    plt.show()
+plt.show()
 
-    # this is a second figure
-    plt.figure(2)
-    plt.plot(t, t**2, 'bs-', label='square')
+# this is a second figure
+plt.figure(2)
+plt.plot(t, t**2, 'bs-', label='square')
 
-    plt.legend(loc='upper left', shadow=True, fontsize='x-large')
-    plt.title('This is figure 2')
+plt.legend(loc='upper left', shadow=True, fontsize='x-large')
+plt.title('This is figure 2')
 
-    plt.show()
+plt.show()
 ```
 
 A single figure can also include multiple plots in a grid pattern. The
@@ -245,18 +245,18 @@ A single figure can also include multiple plots in a grid pattern. The
 the number of the space in the grid that particular plot is occupying:
 
 ```python
-    plt.figure(1)
+plt.figure(1)
 
-    plt.subplot(2,2,1) # two row, two columns, position 1
-    plt.plot(t, t, 'r--', label='linear')
+plt.subplot(2,2,1) # two row, two columns, position 1
+plt.plot(t, t, 'r--', label='linear')
 
-    plt.subplot(2,2,2) # two row, two columns, position 2
-    plt.plot(t, t**2, 'bs-', label='square')
+plt.subplot(2,2,2) # two row, two columns, position 2
+plt.plot(t, t**2, 'bs-', label='square')
 
-    plt.subplot(2,2,3) # two row, two columns, position 3
-    plt.plot(t, t**3, 'g^:', label='cubic')
+plt.subplot(2,2,3) # two row, two columns, position 3
+plt.plot(t, t**3, 'g^:', label='cubic')
 
-    plt.show()
+plt.show()
 ```
 
 ## 4. Make other types of plots:

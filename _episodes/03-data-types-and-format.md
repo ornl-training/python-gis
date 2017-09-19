@@ -78,7 +78,7 @@ same `surveys.csv` dataset that we've used in previous lessons.
 
 ```python
 # note that pd.read_csv is used because we imported pandas as pd
-surveys_df = pd.read_csv("data/surveys.csv")
+surveys_df = pd.read_csv("surveys.csv")
 ```
 
 Remember that we can check the type of an object like this:
