@@ -30,7 +30,7 @@ Wilkinson.
 ```python
 import pandas as pd
 
-surveys_complete = pd.read_csv( 'surveys.csv', index_col=0)
+surveys_complete = pd.read_csv('surveys_complete.csv', index_col=0)
 surveys_complete.index.name = 'X'
 surveys_complete
 ```
@@ -76,7 +76,7 @@ exportable plots
 
 ```python
 %matplotlib notebook
-ggplot( aesthetics= aes(x = 'weight', y = 'hindfoot_length'), data = surveys_complete)
+ggplot(aesthetics= aes(x = 'weight', y = 'hindfoot_length'), data = surveys_complete)
 ```
 
 ![png](../fig/output_6_0.png)
