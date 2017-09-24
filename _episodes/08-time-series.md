@@ -203,8 +203,53 @@ ts.loc[(ts.AO > 0) & (ts.NAO < 0)
 
 ![ts Plot 5](../fig/08_plot_5.png)
 
-## Statistics
-
 ## Resampling
 
+Pandas provide easy way to resample data to different time frequency. Two main parameters for resampling is time period you resample to and the 
+method that you use. By default the method is `mean`. The following example calculates annual ('A') mean of the AO data set:
+
+```python
+AO_mm = ts.AO.resample('A')
+AO_mm.mean().plot(style='g--')
+```
+
+![ts Plot 6](../fig/08_plot_6.png)
+
+You can also specify your own resampling method (change resampling period over 3 years):
+
+```python
+import numpy as np
+AO_mm = ts.AO.resample('3A')
+AO_mm.apply(np.max).plot(style='g--')
+```
+
+![ts Plot 7](../fig/08_plot_7.png)
+
+Multiple plots on the same figure:
+
+```python
+AO_mm = ts.AO.resample("A")
+AO_mm.mean()['1990':'2020'].plot(label='mean')
+AO_mm.apply(np.min)['1990':'2020'].plot(label='min')
+AO_mm.apply(np.max)['1990':'2020'].plot(label='max')
+```
+
+![ts Plot 8](../fig/08_plot_8.png)
+
 ## Moving Statistics
+
+Rolling mean:
+
+```python
+ts.rolling(window=12).mean().plot(style='-g')
+```
+
+![ts Plot 9](../fig/08_plot_9.png)
+
+Rolling correlation:
+
+```python
+ts.AO.rolling(window=120).corr(ts.NAO).plot(style='-g')
+```
+
+![ts Plot 10](../fig/08_plot_10.png)
