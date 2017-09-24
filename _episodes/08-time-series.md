@@ -2,8 +2,13 @@
 title: Time Series
 teaching: 20
 exercises: 25
-
+questions:
+  - " How can I load a time series in Pandas? "
+  - " What features are available for working with time series? "
 objectives:
+  - "Show how to load a time series."
+  - "Show how to set up a DataFrame so that it can be used for time series analysis."
+  - "Show working with and plotting time series data."
 ---
 
 A Time Series is a set of data points collected at constant time intervals. These can be analyzed to determine the long term trend, 
