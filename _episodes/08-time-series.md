@@ -258,3 +258,9 @@ ts.AO.rolling(window=120).corr(ts.NAO).plot(style='-g')
 ```
 
 ![ts Plot 10](../fig/08_plot_10.png)
+
+> ## Challenge
+>
+> How would you apply your own rolling function to the data set? What
+> arguments does the function need to accept?
+{: .challenge}
