@@ -6,14 +6,15 @@ permalink: /setup/
 
 > ## Data
 {: .prereq}
-For this lesson, we will use six files for the data. Download these files to your computer. Once you click on them they should be automatically downloaded to your default download directory. Some browsers may require you to right click on the link to specify the download location.
+For this lesson, we will use a number of different data sets. Download these files to your computer. Once you click on them they should be automatically downloaded to your default download directory. Some browsers may require you to right click on the link to specify the download location.
 
 - [surveys.csv](../data/surveys.csv)
 - [surveys_complete.csv](../data_output/surveys_complete.csv)
 - [species.csv](../data/species.csv)
 - [speciesSubset.csv](../data/speciesSubset.csv)
 - [bouldercreek_09_2013.txt](../data/bouldercreek_09_2013.txt)
-- [SQL Database](../data/portal_mammals.sqlite)
+- [monthly.ao.index.b50.current.ascii](../data/monthly.ao.index.b50.current.ascii)
+- [norm.nao.monthly.b5001.current.ascii](../data/norm.nao.monthly.b5001.current.ascii)
 
 > ## Software
 {: .prereq}

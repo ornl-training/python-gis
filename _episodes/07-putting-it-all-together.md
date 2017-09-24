@@ -1,5 +1,5 @@
 ---
-title: Data Ingest & Visualization - Matplotlib & Pandas
+title: Data Ingest & Visualization
 teaching: 20
 exercises: 25
 questions:

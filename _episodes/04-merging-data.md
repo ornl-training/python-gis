@@ -1,5 +1,5 @@
 ---
-title: Combining DataFrames with pandas
+title: Combining DataFrames
 teaching: 20
 exercises: 25
 questions:
