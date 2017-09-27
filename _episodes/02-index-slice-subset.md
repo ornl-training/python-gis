@@ -100,7 +100,7 @@ within objects starting at 1.
 
 ```python
 # Create a list of numbers:
-a = [1, 2, 3, 4, 5]
+grades = [88, 72, 93, 94]
 ```
 
 ![indexing diagram](../fig/slicing-indexing.svg)
@@ -112,19 +112,19 @@ a = [1, 2, 3, 4, 5]
 > 1. What value does the code below return?
 >
 >    ```python
->    a[-2]
+>    grades[-2]
 >    ```
 >
 > 2. What value does the code below return? Why?
 >
 >    ```python
->    a[5]
+>    grades[4]
 >    ```
 >
 > 5. What about this?
 >
 >    ```python
->    a[len(a)]
+>    grades[len(grades)]
 >    ```
 {: .challenge}
 
@@ -326,8 +326,8 @@ selects the element that is 3 rows down and 7 columns over in the DataFrame.
 >
 > 2. What happens when you call:
 >
->    - `dat.iloc[0:4, 1:4]`
->    - `dat.loc[0:4, 1:4]`
+>    - `surveys_df.iloc[0:4, 1:4]`
+>    - `surveys_df.loc[0:4, 1:4]`
 >
 > - How are the two commands different?
 {: .challenge}
