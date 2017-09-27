@@ -6,6 +6,13 @@ maintainers:
   - Greg Watson
 ---
 
+> ## Etherpad Link
+>
+> Here is a link to the session etherpad. Please use this for asking questions or sharing information with other attendees
+>
+> [http://pad.software-carpentry.org/0xWpg5jKKk](http://pad.software-carpentry.org/0xWpg5jKKk)
+>
+
 **Lesson Maintainers:** {{ page.maintainers | join: ', ' }}
 
 This is an introduction to Pandas designed for participants with some basic Python programming experience. These lessons can be taught in a day (~ 6 hours). It starts with 
