@@ -88,19 +88,21 @@ work like MATLAB. In most cases, this is all that you will need to use, but
 there are many other useful tools in matplotlib that you should explore.
 
 We will cover a few basic commands for formatting plots in this lesson. A great
-resource for help styling your figures is the matplotlib gallery
-(http://matplotlib.org/gallery.html), which includes plots in many different
+resource for help styling your figures is the [Matplotlib gallery](http://matplotlib.org/gallery.html), which includes plots in many different
 styles and the source code that creates them. The simplest of plots is the 2
 dimensional line plot. These examples walk through the basic commands for making
 line plots using pyplots.
 
 > ## Challenge - Lots of plots
 > Make a variety of line plots from your data. If you are using the streamgage
-> data, these could include (1) a hydrograph of the entire month of September
-> 2013, (2) the discharge record for the week of the 2013 Front Range flood
-> (September 9 through 15), (3) discharge vs. time of day, for every day in the
-> record in one figure (Hint: use loops to combine strings and give every line a
-> different style and color), and (4) minimum, maximum, and mean daily discharge
+> data, these could include:
+> 1. A hydrograph of the entire month of September 2013
+> 2. T	he discharge record for the week of the 2013 Front Range flood
+> (September 9 through 15)
+> 3. Discharge vs. time of day, for every day in the record in one figure (Hint: use loops to 
+> combine strings and give every line a
+> different style and color), and
+> 4. minimum, maximum, and mean daily discharge
 > values. Add axis labels, titles, and legends to your figures. Make at least one
 > figure with multiple plots using the function `subplot()`.
 {: .challenge}
