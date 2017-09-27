@@ -19,34 +19,13 @@ objectives:
     - "Create simple plots."
 ---
 
-# Working With Pandas DataFrames in Python
-
-We can automate the process above using Python. It's efficient to spend time
-building the code to perform these tasks because once it's built, we can use it
-over and over on different datasets that use a similar format. This makes our
-methods easily reproducible. We can also easily share our code with colleagues
-and they can replicate the same analysis.
-
-### Starting in the same spot
-
-To help the lesson run smoothly, let's ensure everyone is in the same directory.
-This should help us avoid path and file name issues. At this time please
-navigate to the workshop directory. If you working in IPython Notebook be sure
-that you start your notebook in the workshop directory.
-
-A quick aside that there are Python libraries like [OS
-Library](https://docs.python.org/3/library/os.html) that can work with our
-directory structure, however, that is not our focus today.
-
-### Our Data
+## Our Data
 
 For this lesson, we will be using the Portal Teaching data, a subset of the data
 from Ernst et al
 [Long-term monitoring and experimental manipulation of a Chihuahuan Desert ecosystem near Portal, Arizona, USA](http://www.esapubs.org/archive/ecol/E090/118/default.htm)
 
-We will be using files from the [Portal Project Teaching Database](https://figshare.com/articles/Portal_Project_Teaching_Database/1314459).
-This section will use the `surveys.csv` file that can be downloaded here:
-[https://ndownloader.figshare.com/files/2292172](https://ndownloader.figshare.com/files/2292172)
+This data is contained in the `surveys.csv` file that we downloaded as part of the setup.
 
 We are studying the species and weight of animals caught in plots in our study
 area. The dataset is stored as a `.csv` file: each row holds information for a
