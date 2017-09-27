@@ -6,7 +6,7 @@ questions:
  - " What other tools can I use to create plots apart from ggplot? "
  - " Why should I use Python to create plots?"
 objectives:
-    - Import the pyplot toolbox to create figures in Python.
+ - "Import the pyplot toolbox to create figures in Python."
 ---
 
 
@@ -18,35 +18,33 @@ files that we have provided. In this wrap-up exercise, we will perform
 many of the same tasks with real data sets. This lesson also covers data
 visualization.
 
-As opposed to the previous ones, this lesson does not give step-by-step
-directions to each of the tasks. Use the lesson materials you've already gone
-through as well as the Python documentation to help you along.
-
-## 1. Obtain data
+## Obtain Data
 
 There are many repositories online from which you can obtain data. We are
-providing you with one data file to use with these exercises, but feel free to
-use any data that is relevant to your research. The file
+providing you with one data file to use with these exercises, but if you're
+feeling adventurous, use any data that is relevant to your research! The file
 `bouldercreek_09_2013.txt` contains stream discharge data, summarized at 15
 15 minute intervals (in cubic feet per second) for a streamgage on Boulder
-Creek at North 75th Street (USGS gage06730200) for 1-30 September 2013. If you'd
-like to use this dataset, please find it in the data folder.
+Creek at North 75th Street (USGS gage06730200) for 1-30 September 2013. 
 
-## 2. Clean up your data and open it using Python and Pandas
+## Clean up your data and open it using Python and Pandas
 
-To begin, import your data file into Python using Pandas. Did it fail? Your data
+To begin, import your data file into Python using Pandas. You should be
+experienced with doing this now. Did it fail? 
+
+Your data
 file probably has a header that Pandas does not recognize as part of the data
-table. Remove this header, but do not simply delete it in a text editor! Use
-either a shell script or Python to do this - you wouldn't want to do it by hand
-if you had many files to process.
+table. Remove this header, but do not simply delete it in a text editor! Think
+about how you might use a shell script or a Python program to do this - you wouldn't 
+want to do it by hand if you had many files to process.
 
 If you are still having trouble importing the data as a table using Pandas,
-check the documentation. You can open the docstring in an ipython notebook using
-a question mark. For example:
+check the documentation. You can open the docstring in an Jupyter notebook using
+`[shift]+[tab]`. For example:
 
 ```python
 import pandas as pd
-pd.read_csv?
+pd.read_csv[shift]+[tab]
 ```
 
 Look through the function arguments to see if there is a default value that is
@@ -82,7 +80,7 @@ With the new column names:
 1          200            20
 ```
 
-## 3. Make a line plot of your data
+## Make a line plot of your data
 
 Matplotlib is a Python library that can be used to visualize data. The
 toolbox `matplotlib.pyplot` is a collection of functions that make matplotlib
