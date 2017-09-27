@@ -97,13 +97,14 @@ line plots using pyplots.
 > Make a variety of line plots from your data. If you are using the streamgage
 > data, these could include:
 > 1. A hydrograph of the entire month of September 2013
-> 2. T	he discharge record for the week of the 2013 Front Range flood
+> 2. The discharge record for the week of the 2013 Front Range flood
 > (September 9 through 15)
 > 3. Discharge vs. time of day, for every day in the record in one figure (Hint: use loops to 
 > combine strings and give every line a
-> different style and color), and
-> 4. minimum, maximum, and mean daily discharge
-> values. Add axis labels, titles, and legends to your figures. Make at least one
+> different style and color)
+> 4. Minimum, maximum, and mean daily discharge
+> values. 
+> Add axis labels, titles, and legends to your figures. Make at least one
 > figure with multiple plots using the function `subplot()`.
 {: .challenge}
 
@@ -116,16 +117,16 @@ import matplotlib.pyplot as plt
 ```
 
 By default, matplotlib will create the figure in a separate window. When using
-ipython notebooks, we can make figures appear in-line within the notebook by
+Jupyter notebooks, we can make figures appear in-line within the notebook by
 writing:
 
 ```python
 %matplotlib inline
 ```
 
-We can start by plotting the values of a list of numbers (matplotlib can handle
-many types of numeric data, including numpy arrays and pandas DataFrames - we
-are just using a list as an example!):
+We can start by plotting the values of a list of numbers. Matplotlib can handle
+many types of numeric data, including NumPy arrays and pandas DataFrames - we
+are just using a list as an example:
 
 ```python
 list_numbers = [1.5, 4, 2.2, 5.7]
@@ -133,9 +134,9 @@ plt.plot(list_numbers)
 plt.show()
 ```
 
-The command `plt.show()` prompts Python to display the figure. Without it, it
-creates an object in memory but doesn't produce a visible plot. The ipython
-notebooks (if using `%matplotlib inline`) will automatically show you the figure
+The command `plt.show()` prompts Python to display the figure. Without it, 
+a plot object is created but doesn't produce a visible plot. Jupyter
+notebook (if using `%matplotlib inline`) will automatically show you the figure
 even if you don't write `plt.show()`, but get in the habit of including this
 command!
 
@@ -154,7 +155,7 @@ plt.show()
 A third, optional argument in `plot()` is a string of characters that indicates
 the line type and color for the plot. The default value is a continuous blue
 line. For example, we can make the line red (`'r'`), with circles at every data
-point (`'o'`), and a dot-dash pattern (`'-.'`). Look through the matplotlib
+point (`'o'`), and a dot-dash pattern (`'-.'`). Look through the Matplotlib
 gallery for more examples.
 
 ```python
@@ -165,7 +166,8 @@ plt.show()
 
 The command `plt.axis()` sets the limits of the axes from a list of `[xmin,
 xmax, ymin, ymax]` values (the square brackets are needed because the argument
-for the function `axis()` is one list of values, not four separate numbers!).
+for the function `axis()` is one list of values, not four separate numbers).
+
 The functions `xlabel()` and `ylabel()` will label the axes, and `title()` will
 write a title above the figure.
 
@@ -212,7 +214,7 @@ plt.show()
 ```
 
 The function `legend()` adds a legend to the figure, and the optional keyword
-arguments change its style. By default [typing just `plt.legend()`], the legend
+arguments change its style. By default, the legend
 is on the upper right corner and has no shadow.
 
 Like MATLAB, pyplot is stateful; it keeps track of the current figure and
@@ -259,12 +261,11 @@ plt.plot(t, t**3, 'g^:', label='cubic')
 plt.show()
 ```
 
-## 4. Make other types of plots:
+## Make other types of plots:
 
 Matplotlib can make many other types of plots in much the same way that it makes
-2 dimensional line plots. Look through the examples in
-http://matplotlib.org/users/screenshots.html and try a few of them (click on the
-"Source code" link and copy and paste into a new cell in ipython notebook or
+2 dimensional line plots. Look through [these examples](http://matplotlib.org/users/screenshots.html)
+ and try a few of them (click on the "Source code" link and copy and paste into a new cell in Jupyter notebook or
 save as a text file with a `.py` extension and run in the command line).
 
 > ## Challenge - Final Plot
