@@ -35,7 +35,7 @@ experienced with doing this now. Did it fail?
 Your data
 file probably has a header that Pandas does not recognize as part of the data
 table. Remove this header, but do not simply delete it in a text editor! Think
-about how you might use a shell script or a Python program to do this - you wouldn't 
+about how you might use Pandas to do this - you wouldn't 
 want to do it by hand if you had many files to process.
 
 If you are still having trouble importing the data as a table using Pandas,
@@ -50,7 +50,8 @@ pd.read_csv[shift]+[tab]
 Look through the function arguments to see if there is a default value that is
 different from what your file requires (Hint: the problem is most likely the
 delimiter or separator. Common delimiters are `','` for comma, `' '` for space,
-and `'\t'` for tab).
+and `'\t'` for tab). You might also need to specify which row contains the
+header, and skip over a certain number of rows before the data starts.
 
 Create a DataFrame that includes only the values of the data that are useful to
 you. In the streamgage file, those values might be the date, time, and discharge
