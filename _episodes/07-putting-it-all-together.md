@@ -107,7 +107,7 @@ line plots using pyplots.
 > figure with multiple plots using the function `subplot()`.
 {: .challenge}
 
-### Using pyplot:
+### Using pyplot
 
 First, import the pyplot toolbox:
 
