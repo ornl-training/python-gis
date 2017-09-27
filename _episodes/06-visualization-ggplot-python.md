@@ -289,12 +289,6 @@ Let's calculate number of counts per year for each species. To do that we need
 to group data first and count records within each group.
 
 ```python
-#yearly_counts <- surveys_complete %>%
-                 group_by(year, species_id) %>%
-                 tally
-```
-
-```python
 yearly_counts = surveys_complete[['year','species_id','species']].groupby(['year', 'species_id']).count().reset_index()
 yearly_counts.columns = ['year','species_id', 'n']
 yearly_counts
@@ -378,17 +372,6 @@ the background to white using the function `theme_bw()`. Additionally you can al
 the grid.
 
 ```python
- ggplot(data = yearly_sex_counts, aes(x = year, y = n, color = species_id, group = sex)) +
-     geom_line() +
-     facet_wrap(~ species_id) +
-     theme_bw() +
-     theme(panel.grid.major.x = element_blank(),
-	   panel.grid.minor.x = element_blank(),
-	   panel.grid.major.y = element_blank(),
-	   panel.grid.minor.y = element_blank())
-```
-
-```python
  ggplot(aes(x = "year", y = "n", color = "species_id", group = "sex"),data = yearly_sex_counts ) + \
      geom_line() + \
             facet_wrap( "species_id") + \
@@ -452,12 +435,6 @@ ggplot( aes(x="year", y="avg_weight", color = "species_id", group = "species_id"
     facet_grid("sex")
 ```
 
-```python
-# One row, facet by column
-ggplot(data = yearly_sex_weight, aes(x=year, y=avg_weight, color = species_id, group = species_id)) +
-    geom_line() +
-    facet_grid(. ~ sex)
-```
 ```python
 # One row, facet by column
 ggplot( aes(x="year", y="avg_weight", color = "species_id", group = "species_id"),data = yearly_sex_weight) + \
@@ -524,15 +501,6 @@ ggplot( aes(x = "year", y = "n", color = "sex", group = "sex"),data = yearly_sex
 
 If you like the changes you created to the default theme, you can save them as
 an object to easily apply them to other plots you may create:
-
-```python
-arial_grey_theme <- theme(axis.text.x = element_text(colour="grey20", size=12, angle=90, hjust=.5, vjust=.5),
-                          axis.text.y = element_text(colour="grey20", size=12),
-                          text=element_text(size=16, family="Arial"))
-ggplot(surveys_complete, aes(x = species_id, y = hindfoot_length)) +
-    geom_boxplot() +
-    arial_grey_theme
-```
 
 ```python
 arial_grey_theme = theme(axis_text_x = element_text(color="grey", size=10, angle=90, hjust=.5, vjust=.5),
