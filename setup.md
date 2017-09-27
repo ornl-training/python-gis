@@ -6,7 +6,11 @@ permalink: /setup/
 
 > ## Data
 {: .prereq}
-For this lesson, we will use a number of different data sets. Download these files to your computer. Once you click on them they should be automatically downloaded to your default download directory. Some browsers may require you to right click on the link to specify the download location.
+For this lesson, we will use a number of different data sets. Download a zip archive containing all the files to your computer and unzip this in a known location:
+
+- [data_files.zip](../data/data_files.zip)
+
+You can also download the files individually:
 
 - [surveys.csv](../data/surveys.csv)
 - [surveys_complete.csv](../data_output/surveys_complete.csv)
@@ -15,6 +19,8 @@ For this lesson, we will use a number of different data sets. Download these fil
 - [bouldercreek_09_2013.txt](../data/bouldercreek_09_2013.txt)
 - [monthly.ao.index.b50.current.ascii](../data/monthly.ao.index.b50.current.ascii)
 - [norm.nao.monthly.b5001.current.ascii](../data/norm.nao.monthly.b5001.current.ascii)
+
+Once you click on a file, it should be automatically downloaded to your default download directory. Some browsers may require you to right click on the link to specify the download location.
 
 > ## Software
 {: .prereq}
